@@ -1,0 +1,11 @@
+### IDE
+.idea/
+*.iml
+
+### Gradle
+.gradle/
+.kotlin/
+build/
+
+### Loom
+run/

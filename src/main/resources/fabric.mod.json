@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "compose",
+  "version": "${version}",
+  "name": "compose",
+  "description": "A mod that adds a Compose API for Display Entities",
+  "authors": [
+    "Martmists"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Martmists-GH/compose-fabric"
+  },
+  "license": "BSD-3-Clause-NON-AI",
+  "icon": "assets/compose/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "com.martmists.compose.ComposeMod",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
