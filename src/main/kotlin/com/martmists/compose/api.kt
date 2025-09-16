@@ -28,7 +28,7 @@ interface DisplayRoot {
     suspend fun face(entity: Entity)
 }
 
-fun Entity.openDisplayGui(block: @Composable DisplayRoot.() -> Unit): ElementHolder {
+fun Entity.openDisplayGui(block: @Composable @DisplayEntityComposable DisplayRoot.() -> Unit): ElementHolder {
     val holder = ElementHolder()
     val root = DisplayRootNode(WeakReference(holder))
 

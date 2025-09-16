@@ -7,6 +7,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.martmists.compose.DisplayEntityComposable
 import com.martmists.compose.DisplayRoot
 import com.martmists.compose.layout.Alignment
 import com.martmists.compose.layout.Box
@@ -29,6 +30,7 @@ data class SliderStyle(
 )
 
 @Composable
+@DisplayEntityComposable
 fun VerticalSlider(value: Int, range: IntProgression, ticks: Int = 1 + abs(range.last - range.first) / range.step, style: SliderStyle = SliderStyle(), transform: Matrix4f = Matrix4f().identity(), callback: (Int) -> Unit) {
     var chosenIndex by remember {
         var targetIndex = (value - range.first).toFloat() / (range.last - range.first) * (ticks - 1)
@@ -78,6 +80,7 @@ fun VerticalSlider(value: Int, range: IntProgression, ticks: Int = 1 + abs(range
 }
 
 @Composable
+@DisplayEntityComposable
 fun VerticalSlider(value: Float, range: ClosedRange<Float>, ticks: Int = 11, style: SliderStyle = SliderStyle(), transform: Matrix4f = Matrix4f().identity(), callback: (Float) -> Unit) {
     var chosenIndex by remember {
         var targetIndex = (value - range.start) / (range.endInclusive - range.start) * (ticks - 1)

@@ -1,11 +1,13 @@
 package com.martmists.compose.ui
 
 import androidx.compose.runtime.Composable
+import com.martmists.compose.DisplayEntityComposable
 import com.martmists.compose.DisplayRoot
 import com.martmists.compose.unit.Color
 import org.joml.Matrix4f
 
 @Composable
+@DisplayEntityComposable
 fun Rect(width: Float, height: Float, color: Color = Color(0x40000000), transform: Matrix4f = Matrix4f().identity()) {
     Text(
         text = "  ",
