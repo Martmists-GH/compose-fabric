@@ -2,6 +2,12 @@
 
 This is a snippet for how to use Jetbrains Compose Multiplatform to show Minecraft Display Entities.
 
+## Preview
+
+The following is a preview of the [ComposeTestMod](./src/testmod/kotlin/com/martmists/compose/testmod/ComposeTestMod.kt).
+
+![A video showing the animated contents of the sample snippet](./.github/preview.mp4)
+
 ## Usage
 
 Compose displays must be bound to an entity, and must explicitly add players to watch the displays.
